@@ -191,7 +191,7 @@ export default function RegisterUserTab() {
             type="file"
             accept=".jpg,.jpeg,.png,image/jpeg,image/png"
             onChange={onFileChange}
-            className="block w-full text-sm text-slate-600 file:mr-4 file:h-12 file:rounded-xl file:border-0 file:bg-slate-900 file:px-5 file:text-white transition-all duration-300 hover:file:bg-slate-800"
+            className="block cursor-pointer w-full text-sm text-slate-600 file:mr-4 file:h-12 file:cursor-pointer file:rounded-xl file:border-0 file:bg-slate-900 file:px-5 file:text-white transition-all duration-300 hover:file:bg-slate-800"
           />
           <p className="text-xs text-slate-500">Upload PNG, JPEG, or JPG file.</p>
         </div>

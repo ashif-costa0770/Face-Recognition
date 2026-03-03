@@ -10,7 +10,7 @@ export default function SegmentedTabs({ value, onChange, options }) {
             key={option.value}
             type="button"
             onClick={() => onChange(option.value)}
-            className={`h-11 flex-1 rounded-xl px-4 text-sm font-semibold transition-all duration-300 ${
+            className={`h-11 cursor-pointer flex-1 rounded-xl px-4 text-sm font-semibold transition-all duration-300 ${
               isActive
                 ? "bg-white text-slate-900 shadow-sm ring-1 ring-slate-200"
                 : "text-slate-500 hover:text-slate-700"
