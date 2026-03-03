@@ -19,6 +19,7 @@ const modeOptions = [
   { value: MODES.UPLOAD, label: "Upload" },
 ];
 
+//! verify user handle
 export default function VerifyUserTab() {
   const videoRef = useRef(null);
   const streamRef = useRef(null);
@@ -193,7 +194,7 @@ export default function VerifyUserTab() {
             type="file"
             accept=".jpg,.jpeg,.png,image/jpeg,image/png"
             onChange={onFileChange}
-            className="block w-full cursor-pointer text-sm text-slate-600 file:mr-4 file:h-12 file:cursor-pointer file:rounded-xl file:border-0 file:bg-slate-900 file:px-5 file:text-white transition-all duration-300 hover:file:bg-slate-800"
+            className="block w-full  text-sm text-slate-600 file:mr-4 file:h-12 file:cursor-pointer file:rounded-xl file:border-0 file:bg-slate-900 file:px-5 file:text-white transition-all duration-300 hover:file:bg-slate-800"
           />
           <p className="text-xs text-slate-500">Upload PNG, JPEG, or JPG file.</p>
         </div>
