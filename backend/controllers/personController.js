@@ -3,6 +3,7 @@ import { loadImage } from "canvas";
 import { faceapi } from "../config/faceapi.js";
 import Person from "../models/Person.js";
 
+//! cleanup uploaded files
 const cleanupUploadedFiles = (files = []) => {
   for (const file of files) {
     try {
@@ -15,6 +16,7 @@ const cleanupUploadedFiles = (files = []) => {
   }
 };
 
+//! create person
 export const createPerson = async (req, res, next) => {
   try {
     const { name } = req.body;
@@ -32,6 +34,7 @@ export const createPerson = async (req, res, next) => {
   }
 };
 
+//! get persons
 export const getPersons = async (_req, res, next) => {
   try {
     const persons = await Person.find().sort({ createdAt: -1 });
@@ -48,6 +51,7 @@ export const getPersons = async (_req, res, next) => {
   }
 };
 
+//! get person by id
 export const getPersonById = async (req, res, next) => {
   try {
     const person = await Person.findById(req.params.id);
@@ -62,6 +66,7 @@ export const getPersonById = async (req, res, next) => {
   }
 };
 
+//! delete person
 export const deletePerson = async (req, res, next) => {
   try {
     const person = await Person.findByIdAndDelete(req.params.id);
@@ -76,6 +81,7 @@ export const deletePerson = async (req, res, next) => {
   }
 };
 
+//! train person
 export const trainPerson = async (req, res, next) => {
   const warnings = [];
   const files = req.files || [];
@@ -137,6 +143,7 @@ export const trainPerson = async (req, res, next) => {
   }
 };
 
+//! clear training
 export const clearTraining = async (req, res, next) => {
   try {
     const person = await Person.findById(req.params.id);
